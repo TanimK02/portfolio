@@ -28,7 +28,7 @@ export function Contact() {
             <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
               Email
             </span>
-            <a href={mailto} className={`break-words text-center ${contactLinkClass}`}>
+            <a href={mailto} className={`wrap-break-word text-center ${contactLinkClass}`}>
               {contact.email}
             </a>
           </div>

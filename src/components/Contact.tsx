@@ -2,6 +2,7 @@ import { contact } from '../data/contact'
 
 export function Contact() {
   const mailto = `mailto:${contact.email}`
+  const tel = `tel:+1${contact.phone.replace(/\D/g, '')}`
 
   return (
     <section
@@ -24,6 +25,13 @@ export function Contact() {
           >
             {contact.email}
           </a>
+          , or call or text{' '}
+          <a
+            href={tel}
+            className="font-medium text-teal-400 underline decoration-teal-500/40 underline-offset-4 hover:text-teal-300"
+          >
+            {contact.phone}
+          </a>
           .
         </p>
         <ul className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -40,13 +48,6 @@ export function Contact() {
             </li>
           ))}
         </ul>
-        <p className="mt-16 text-xs text-zinc-600">
-          Built with Vite and React. Edit contact details in{' '}
-          <code className="rounded bg-zinc-800 px-1 font-mono text-zinc-400">
-            src/data/contact.ts
-          </code>
-          .
-        </p>
       </div>
     </section>
   )

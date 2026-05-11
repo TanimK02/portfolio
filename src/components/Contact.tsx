@@ -1,5 +1,8 @@
 import { contact } from '../data/contact'
 
+const contactLinkClass =
+  'font-medium text-teal-400 underline decoration-teal-500/40 underline-offset-4 hover:text-teal-300'
+
 export function Contact() {
   const mailto = `mailto:${contact.email}`
   const tel = `tel:+1${contact.phone.replace(/\D/g, '')}`
@@ -18,22 +21,26 @@ export function Contact() {
           Contact
         </h2>
         <p className="mt-4 text-zinc-400">
-          Prefer email? Reach me at{' '}
-          <a
-            href={mailto}
-            className="font-medium text-teal-400 underline decoration-teal-500/40 underline-offset-4 hover:text-teal-300"
-          >
-            {contact.email}
-          </a>
-          , or call or text{' '}
-          <a
-            href={tel}
-            className="font-medium text-teal-400 underline decoration-teal-500/40 underline-offset-4 hover:text-teal-300"
-          >
-            {contact.phone}
-          </a>
-          .
+          Prefer email or phone—reach me using either option below.
         </p>
+        <div className="mx-auto mt-8 flex max-w-md flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-1.5">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              Email
+            </span>
+            <a href={mailto} className={`break-words text-center ${contactLinkClass}`}>
+              {contact.email}
+            </a>
+          </div>
+          <div className="flex flex-col items-center gap-1.5">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              Phone
+            </span>
+            <a href={tel} className={`tabular-nums ${contactLinkClass}`}>
+              {contact.phone}
+            </a>
+          </div>
+        </div>
         <ul className="mt-10 flex flex-wrap items-center justify-center gap-3">
           {contact.links.map((link) => (
             <li key={link.href}>

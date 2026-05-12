@@ -77,4 +77,30 @@ export const projects: Project[] = [
     image: "https://res.cloudinary.com/df7gjpnis/image/upload/v1778467417/Screenshot_2026-05-09_at_7.32.41_PM_sfc9fh.png",
     imageFit: 'contain',
   },
+  {
+    id: 'weather-app',
+    title: 'WeatherApp',
+    description:
+      'Weather dashboard with city search, Fahrenheit/Celsius toggle, current conditions, hourly scroll, 5-day forecast, and detail cards for UV, humidity, visibility, feels-like, and sunrise/sunset.',
+    tags: ['JavaScript', 'HTML', 'CSS', 'Webpack'],
+    emoji: '🌤️',
+    liveUrl: 'https://tanimk02.github.io/WeatherApp/',
+    repoUrl: 'https://github.com/TanimK02/WeatherApp',
+    image:
+      'https://res.cloudinary.com/df7gjpnis/image/upload/v1778555102/Screenshot_2026-05-11_at_8.01.36_PM_pkjqlx.png',
+    imageFit: 'contain',
+  },
+  {
+    id: 'file-uploader',
+    title: 'fileUploader',
+    description:
+      'File manager with drag-and-drop uploads, 5 MB size validation, authenticated sessions, folders with rename/delete, and a sortable file list with metadata.',
+    tags: ['Node.js', 'Express', 'Prisma', 'EJS', 'JavaScript'],
+    emoji: '☁️',
+    liveUrl: 'https://fileuploader-i163.onrender.com/home',
+    repoUrl: 'https://github.com/TanimK02/fileUploader',
+    image:
+      'https://res.cloudinary.com/df7gjpnis/image/upload/v1778555114/Screenshot_2026-05-11_at_8.02.12_PM_ukzkfg.png',
+    imageFit: 'contain',
+  },
 ]

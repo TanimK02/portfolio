@@ -33,6 +33,11 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">
           {project.description}
         </p>
+        {project.demoNote && (
+          <p className="mt-3 rounded-lg border border-amber-500/25 bg-amber-950/30 px-3 py-2 text-xs leading-relaxed text-amber-100/90">
+            {project.demoNote}
+          </p>
+        )}
         <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies">
           {project.tags.map((tag) => (
             <li key={tag}>

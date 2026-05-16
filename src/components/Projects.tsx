@@ -4,6 +4,8 @@ import { projects } from '../data/projects'
 function ProjectCard({ project }: { project: Project }) {
   const hasLive = Boolean(project.liveUrl)
   const hasRepo = Boolean(project.repoUrl)
+  const hasVideo = Boolean(project.videoUrl)
+  const hasAnyLink = hasLive || hasRepo || hasVideo
   const imageObjectFit =
     project.imageFit === 'contain' ? 'object-contain' : 'object-cover'
 
@@ -46,7 +48,7 @@ function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-1 items-center justify-center rounded-lg bg-teal-600 px-3 py-2 text-center text-sm font-medium text-white transition hover:bg-teal-500 sm:flex-none"
+              className="inline-flex min-w-22 flex-1 items-center justify-center rounded-lg bg-teal-600 px-3 py-2 text-center text-sm font-medium text-white transition hover:bg-teal-500 sm:flex-none"
             >
               Live
             </a>
@@ -56,12 +58,22 @@ function ProjectCard({ project }: { project: Project }) {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-1 items-center justify-center rounded-lg border border-zinc-600 px-3 py-2 text-center text-sm font-medium text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-800/80 sm:flex-none"
+              className="inline-flex min-w-22 flex-1 items-center justify-center rounded-lg border border-zinc-600 px-3 py-2 text-center text-sm font-medium text-zinc-100 transition hover:border-zinc-500 hover:bg-zinc-800/80 sm:flex-none"
             >
               Code
             </a>
           )}
-          {!hasLive && !hasRepo && (
+          {hasVideo && (
+            <a
+              href={project.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-w-22 flex-1 items-center justify-center rounded-lg border border-violet-500/45 px-3 py-2 text-center text-sm font-medium text-violet-100 transition hover:border-violet-400/70 hover:bg-violet-950/45 sm:flex-none"
+            >
+              Video
+            </a>
+          )}
+          {!hasAnyLink && (
             <span className="text-xs text-zinc-500">Links coming soon</span>
           )}
         </div>

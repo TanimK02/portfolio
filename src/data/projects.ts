@@ -11,6 +11,8 @@ export type Project = {
   imageFit?: 'cover' | 'contain'
   liveUrl?: string
   repoUrl?: string
+  /** Walkthrough or demo recording (e.g. YouTube, Loom) */
+  videoUrl?: string
 }
 
 export const projects: Project[] = [
@@ -18,7 +20,7 @@ export const projects: Project[] = [
     id: 'halalmap',
     title: 'HalalMap',
     description:
-      'Halal food delivery marketplace MVP: customer mobile app, restaurant dashboard, admin panel, and a shared Express/Prisma API in a pnpm monorepo.',
+      'Halal food marketplace MVP: customer mobile app, restaurant web dashboard, and admin console. Shared Express + Prisma API on Postgres, packaged in a pnpm monorepo.',
     tags: [
       'TypeScript',
       'React Native (Expo)',
@@ -39,7 +41,7 @@ export const projects: Project[] = [
     id: 'odinbook',
     title: 'OdinBook (Twitter/X Clone)',
     description:
-      'Full-stack Twitter/X clone with auth, tweets, replies, likes/retweets, profiles, image uploads, advanced search, and infinite scroll.',
+      'Twitter-style social feed with auth, posts, replies, likes, reposts, profiles, and media. Full-stack React and Express with JWT auth and Prisma.',
     tags: [
       'React',
       'Vite',
@@ -60,7 +62,7 @@ export const projects: Project[] = [
     id: 'admin-dashboard',
     title: 'AdminDashboard',
     description:
-      'Full-stack admin dashboard with an Express + Prisma (Postgres) backend and a Vite + React + TypeScript + Tailwind frontend.',
+      'Admin-style dashboard for browsing and managing records through a typed UI. Vite + React + Tailwind front end with an Express + Prisma + Postgres API.',
     tags: [
       'TypeScript',
       'React',
@@ -81,7 +83,7 @@ export const projects: Project[] = [
     id: 'weather-app',
     title: 'WeatherApp',
     description:
-      'Weather dashboard with city search, Fahrenheit/Celsius toggle, current conditions, hourly scroll, 5-day forecast, and detail cards for UV, humidity, visibility, feels-like, and sunrise/sunset.',
+      'Search cities, toggle °F/°C, and view current weather, hourly strip, five-day outlook, and extra detail tiles. Vanilla JS UI bundled with Webpack for static hosting.',
     tags: ['JavaScript', 'HTML', 'CSS', 'Webpack'],
     emoji: '🌤️',
     liveUrl: 'https://tanimk02.github.io/WeatherApp/',
@@ -94,7 +96,7 @@ export const projects: Project[] = [
     id: 'file-uploader',
     title: 'fileUploader',
     description:
-      'File manager with drag-and-drop uploads, 5 MB size validation, authenticated sessions, folders with rename/delete, and a sortable file list with metadata.',
+      'Session-backed file manager with drag-and-drop uploads, a 5 MB limit, folders, and a sortable file list. Server-rendered with Express, Prisma, and EJS.',
     tags: ['Node.js', 'Express', 'Prisma', 'EJS', 'JavaScript'],
     emoji: '☁️',
     liveUrl: 'https://fileuploader-i163.onrender.com/home',

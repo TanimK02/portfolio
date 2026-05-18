@@ -78,6 +78,7 @@ export const projects: Project[] = [
     emoji: '🛠️',
     liveUrl: 'https://admin-dashboard-five-delta-88.vercel.app',
     demoNote: 'Live demo password: admin123',
+    videoUrl: 'https://www.youtube.com/watch?v=1EMYZXQrRd4',
     repoUrl: 'https://github.com/TanimK02/AdminDashboard',
     image: "https://res.cloudinary.com/df7gjpnis/image/upload/v1778467417/Screenshot_2026-05-09_at_7.32.41_PM_sfc9fh.png",
     imageFit: 'contain',
